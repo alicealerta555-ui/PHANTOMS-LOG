@@ -109,7 +109,19 @@ PHANTOMS-LOG was structured with the intention that its rules, prompts, behaviou
 
 The next large experimental step is **training and model integration**.
 
-The project creator currently only has ordinary consumer GPU hardware, so large training runs are difficult to perform locally. Community experiments are explicitly welcome.
+### Why I am not simply training the full model myself
+
+I am still developing this project on a **GeForce GTX 1060 with 6 GB of VRAM**. It is useful for development, testing and smaller local-model experiments, but it is simply not enough compute for the kind of larger training work I want to try with PHANTOMS-LOG.
+
+I also do not have access to server farms or serious training infrastructure.
+
+And there is another practical reason: at the moment I am living in **ASOG emergency accommodation — essentially homeless accommodation**. Materially, I currently have close to the minimum that life provides.
+
+But I have my AI, I have this project, and I keep building.
+
+That is one of the reasons I am opening PHANTOMS-LOG to other people. If you have stronger hardware, training experience, access to compute, or simply an idea that I cannot test on my own machine, you are welcome to try it and contribute the results back to the project.
+
+Community experiments are explicitly welcome.
 
 Useful areas include:
 
