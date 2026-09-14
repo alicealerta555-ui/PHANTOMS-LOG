@@ -6,6 +6,28 @@ PHANTOMS-LOG is an experimental open-source **Cyberpunk text RPG for ChatGPT and
 
 > The goal is not an AI that merely writes a Cyberpunk story. The goal is an AI game master operating inside a real, persistent game simulation.
 
+## Play directly in ChatGPT
+
+PHANTOMS-LOG is designed so that the public game package can be used directly inside a ChatGPT conversation.
+
+1. Download the **PHANTOMS-LOG RC2.6.8 Public Alpha** package.
+2. Start a new ChatGPT conversation and upload the project ZIP/package to the chat.
+3. Tell ChatGPT to read and follow `CHAT_SPIELSTART.md` and start PHANTOMS-LOG from the uploaded project files.
+4. For a new run, complete character creation when prompted.
+5. Play using normal free-form language. You do not need to select from A/B/C/D dialogue buttons.
+
+A suitable start message is:
+
+```text
+Use the uploaded PHANTOMS-LOG project files. Read CHAT_SPIELSTART.md and follow its game-start instructions. Start a new PHANTOMS-LOG run and guide me through character creation. Treat the runtime and persistent game state as authoritative; do not invent successful actions, items or world state that the game does not support.
+```
+
+For an existing run, upload the relevant public project/save package and tell ChatGPT to **continue the existing run rather than silently creating a replacement save**.
+
+The language model is the interface and game-master layer; the project's runtime, rules and persistent state are intended to remain authoritative wherever the current build provides them.
+
+> **Current Public Alpha note:** the complete Public Alpha package/source tree must be available to the chat for this workflow. The GitHub repository is still being populated with the full public source package; the README alone is not the game.
+
 ## Why text first?
 
 The project starts as a text adventure by design. The simulation should work before a graphics engine is placed on top of it. Later, a visual client, generated backgrounds, NPC portraits, creature images and other presentation layers can be added without changing the canonical world state.
@@ -169,7 +191,9 @@ The runtime should eventually be able to work with different model providers or 
 
 Image generation is also a natural future layer. Locations, NPCs, creatures, items and major events could be visualized automatically, provided the image pipeline remains subordinate to the canonical game state.
 
-## Quick start
+## Local quick start
+
+If you are running the project locally rather than through ChatGPT, use the shell launcher.
 
 Linux/macOS-style shell:
 
