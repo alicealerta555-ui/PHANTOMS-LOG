@@ -231,3 +231,185 @@ PHANTOMS-LOG is being built around a simple idea:
 **AI gaming should be more than a chatbot pretending to be a game.**
 
 The simulation should exist independently enough that NPCs, objects, locations and consequences remain real parts of the game state — and the language model should make that world understandable, playable and human.
+# PHANTOMS-LOG RC2.7.5 — FULL STANDALONE
+
+PHANTOMS-LOG RC2.7.5 closes the current development line as a self-contained playable and development package.
+
+This release brings the mission, profession, class progression, organization and endgame systems together into one persistent runtime.
+
+## Major Changes
+
+### Mission & Profession System
+
+Every profession can attempt every mission.
+
+There are no artificial class or profession locks. Instead, success depends on the character's actual capabilities:
+
+* Skills
+* Talents
+* Equipment
+* Preparation
+* Crew support
+* Environmental conditions
+* Mission difficulty
+* Danger and time pressure
+
+Low skill can result in genuine failure. High skill improves the odds but does not guarantee success.
+
+Mission outcomes include:
+
+* Full Success
+* Success With Cost
+* Partial Success
+* Failure
+* Critical Failure
+
+Failure is a persistent part of the game rather than something automatically corrected by the GM.
+
+### Expanded Mission Content
+
+The current release contains 60 authored mission templates covering areas including:
+
+* Repair and maintenance
+* Drone operations
+* Search and rescue
+* Medicine
+* Hunting and tracking
+* Ecology
+* Exploration
+* Diplomacy
+* Recruitment
+* Trade
+* Logistics
+* Production
+* Infrastructure
+* Disaster response
+* Agriculture
+* Investigation
+* Research
+* Resonance and anomaly work
+* Organization operations
+
+Mission generation follows the world state.
+
+The game does not create a broken generator simply because an Operator needs work, nor invent a creature because a Hunter needs something to hunt.
+
+### Persistent Consequences
+
+Mission failure and partial success can now feed persistent consequences back into the world.
+
+Consequences are evidence-bound and routed through authoritative world systems.
+
+A bad roll alone cannot invent:
+
+* an injured NPC
+* destroyed infrastructure
+* dead creatures
+* missing resources
+* ecological damage
+
+The corresponding event must actually have occurred in the simulation.
+
+### Organizations, Crews & Production
+
+Organizations can now support persistent operational structures including:
+
+* Crews and specialized teams
+* Delegated/off-screen operations
+* Warehouses
+* Resource flows
+* Supply chains
+* Production facilities
+* Production recipes
+* Input reservation
+* Production time
+* Logistics
+* Persistent ledgers
+
+Delegated crews can succeed, partially succeed or fail.
+
+Sending a large group into a dungeon does not guarantee profitable farming.
+
+### Class Progression
+
+The class progression layer now includes **48 world-bound class quest nodes**.
+
+Character development is tied to actual play rather than being only a numerical level system.
+
+The established talent progression remains:
+
+**Level 1: 2 starting class talents**
+**Every additional level: +1 talent**
+
+### Level-50 Legend Paths
+
+All **16 Legend/End Paths** now have dedicated capstone content.
+
+There are **48 modular Legend scenarios** in total.
+
+Legend finales are assembled from the real history of the run, including relevant relationships, organizations, rivals, decisions and world conditions rather than forcing a generic final boss onto every character.
+
+### Persistent Quest Groups
+
+The world includes **12 persistent quest groups** capable of developing independently of the player.
+
+They can:
+
+* travel
+* take jobs
+* succeed
+* fail
+* suffer losses
+* change membership
+* develop reputations
+* compete with the player
+* cooperate with the player
+* reappear later
+
+Their histories are persistent rather than reset for each encounter.
+
+### Dynamic Mission Selection
+
+Dynamic mission selection uses deterministic weighted variation over **world-authorized candidates**.
+
+Randomness creates variation.
+
+It does not create world facts.
+
+The fundamental order remains:
+
+**World State → Plausibility → Actors → Mission Candidates → Weighting → Random Variation → Consequences**
+
+## Validation
+
+Final RC2.7.5 validation:
+
+**4,663 / 4,663 main tests PASS**
+
+**216 / 216 Stage-5 tests PASS**
+
+**266 Stage-5 subtests PASS**
+
+**14 / 14 Stage-3 closure tests PASS**
+
+Compile: **PASS**
+
+Content audit: **PASS**
+
+Authority audit: **PASS**
+
+Release audit: **PASS**
+
+## Starting PHANTOMS-LOG
+
+Use:
+
+`START_GAME.sh`
+
+on the supported local setup, or use the playable full-version entry point documented in `README.md`.
+
+## Release Status
+
+**PHANTOMS-LOG RC2.7.5 — FULL STANDALONE**
+
+This package contains the current runtime, content, tests, release metadata and development context required to understand and continue the current project state without depending on previous release archives or earlier development chats.
